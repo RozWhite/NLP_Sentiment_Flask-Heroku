@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sentiment</title>
+	<link rel="stylesheet" type="text/css" href="/static/style.css"> 
+
+
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<h2><b>Comment Sentiment Analyzer App</b></h2>
+	</div>
+	</header>
+
+
+
+	<div class="results">
+		<h2>Result for your Comment: </h3>
+	{% if prediction >= 0.05%}
+	<h3 style="color:green;">Your comment is Positive 😃</h3>
+	{% elif prediction <= - 0.05%}
+	<h3 style="color:red;">Your comment is Negative 😔 </h3>
+ 	{%else%}
+    <h3 style="color:#FFCC33;">Your comment is Neutral 😶</h3>
+	{% endif %}
+	</div>
+	<br>
+
+	<div class="score">
+	<h2>Score table: </h2>
+	<table  border="1" id="score" class="fixed_headers" style="table-layout:fixed">
+		<tr>
+		  <th id="th1" style="width: 180px" >SENTIMENT METRIC</th>
+		  <th id="th2" style="width: 60px">SCORE</th> 
+		</tr>
+		<tr>
+		  <td headers="th1" style="width: 180px">Positive</td>
+		  <td headers="th2" style="width: 60px">{{text1}}</td>
+		  
+		</tr>
+		<tr>
+		  <td headers="th1" style="width: 180px">Neutral</td>
+		  <td style="width: 60px">{{text2}}</td>
+		  
+		</tr>
+		<tr>
+		  <td headers="th1" style="width: 180px">Negative</td>
+		  <td style="width: 60px">{{text3}}</td>
+		  
+		</tr>
+		<tr>
+		  <td headers="th1" style="width: 180px">Compound</td>
+		  <td style="width: 60px">{{text4}}</td>
+		  
+		</tr>
+	  </table>
+	</div>
+
+
+
+</body>
+</html>

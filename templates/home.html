@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sentiment</title>
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+
+</head>
+<body>
+	<body>
+		<header>
+			<div class="container">
+				<h2><b>Comment Sentiment Analyzer App</b></h2>
+		</div>
+		</header>
+
+		<div class="text">
+		<br><h4><b>NLP App with Flask</b></h4>
+		<p c>A machine learning end to end flask web app for sentiment analysis with VADER.</p> 
+		<p>VADER (Valence Aware Dictionary for Sentiment Reasoning) is a lexicon and rule-based sentiment analysis tool that detects polarity within our text. 
+		This method will give us scores of the following categories:
+		  1. Positive
+		2. Negative
+		3. Neutral
+		4. Compound </p>	
+		</div>
+
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p><b>Enter Your Comment Here</b></p>
+		<textarea name="message" rows="6" cols="50"></textarea>
+		<br>
+
+		<input type="submit" class="btn-info" value="predict">
+	</form>	
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
