@@ -9,9 +9,8 @@ Sentiment is defined as the feeling or emotion expressed by the user in the give
 ```
 Run: python app.py
 ```
-</br>
 <br>
-<img src="sentiment.png" class="center"  height="400"/>
+<img src="sentiment.png" class="center"  width="400"/>
 <br>
-<img src="predict.png" class="center"  height="400"/>
+<img src="predict.png" class="center"  width="400"/>
 
